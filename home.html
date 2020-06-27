@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Logo_Campulung.jpg">
+        <title>Câmpulung Muscel</title>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a href="home.html" style="padding: 0px 0px;"><img class="logo" src="img/Logo_Campulung.jpg"></a></li>
+            <li><a class="active" href="home.html">Câmpulung</a></li>
+            <li><a href="news.html">Anunturi</a></li>
+            <li><a href="Conducere.html">Conducere</a></li>
+            <li><a href="Istorie.html">Istorie</a></li>
+            <li class="right"><a href="contact.html">Contact</a></li>
+        </ul>
+            <img class="bg" src="img/campulung_de_sus.jpg">
+            <b id="camp" class="camp"></b>
+            <br>
+            <br>
+            <video controls>
+                <source src="video/campulung.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <script>
+            var i = 0;
+            var j = 0;
+            var element = document.getElementById("camp");
+            var text = "Câmpulung Muscel!";
+            var leng_text = text.length;
+            var leng_div_2= element.innerHTML.length/2;
+            var interval = setInterval(function(){
+                element.innerHTML = element.innerHTML.slice(0,leng_div_2) + text[i]+text[leng_text-1-i]+element.innerHTML.slice(leng_div_2);
+                leng_div_2= element.innerHTML.length/2;
+                i++;
+
+                if (text.length%2==1 && i == Math.floor(text.length/2)){
+                    element.innerHTML = element.innerHTML.slice(0, leng_div_2) + text[Math.floor(text.length/2)] + element.innerHTML.slice(leng_div_2);
+                }
+
+                if (i+1 > text.length/2){
+                    clearInterval(interval);
+                }
+
+            }, 100);
+        </script>
+    </body>
+</html>

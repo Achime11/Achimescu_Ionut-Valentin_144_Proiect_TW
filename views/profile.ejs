@@ -1,0 +1,21 @@
+<% if(locals.user){ %>
+
+    <script>
+        function logout(){
+            fetch('http://localhost:3000/logout',{
+                method: 'POST'
+            }).then((response) => {
+                if(response.status === 200){
+                    document.getElementById('logoutResponse').innerHTML = 'Ai iesit din cont';
+                    document.getElementsByClassName('info_login')[0].innerHTML = '';
+                }
+            })
+        }
+    </script>
+
+    <div class="info_login">Bine ai venit, <%= user.username %>!</div>
+
+    <p id='logoutResponse'>
+        <button onClick="logout()">Logout</button>
+    </p>
+<% } %>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Logo_Campulung.jpg">
+        <title>Câmpulung Muscel</title>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a href="home.html" style="padding: 0px 0px;"><img class="logo" src="img/Logo_Campulung.jpg"></a></li>
+            <li><a href="home.html">Câmpulung</a></li>
+            <li><a class="active" href="news.html">Anunturi</a></li>
+            <li><a href="Conducere.html">Conducere</a></li>
+            <li><a href="Istorie.html">Istorie</a></li>
+            <li class="right"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="OverWord" class="DummyClassWord"><p id="alert" style="text-align: center;">You are innactive. Stop wasting my time.</p></div>
+        <div id="OverLay" class="DummyClass"></div>
+        <div>
+            <p>&nbsp;</p>
+            <p style="text-align: center;">A N U N Ț</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <p style="text-align: center; font-size: 20px;">Numărătoarea inversă până la zilele Câmpulungului!</p>
+            <p id="demo" style="text-align: center; font-size: 20px;"></p>
+            <script>
+                // Setarea datei pana la care realizam numaratoare inversa
+                var countDownDate = new Date("Jul 18, 2020 00:00:00").getTime();
+                
+                // Actualizarea numaratoarei la fiecare secunda
+                var x = setInterval(function() {
+                
+                // Obtinerea datei de azi
+                var now = new Date().getTime();
+                
+                // Calcularea diferentei dintre data de azi si data pana la care se realizeaza numaratoare inversa
+                var distance = countDownDate - now;
+                    
+                // Calcularea pentru zile,ore,minute si secunde
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                // Modificarea elementului cu id="demo" in rezultatul calculat
+                document.getElementById("demo").innerHTML = days + " zile " + hours + " ore "+ minutes + " minute " + seconds + " secunde ";
+                    
+                // Daca numaratoare inversa s-a terminat, se afiseaza alt mesaj
+                if (distance < 0) 
+                {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "La Multi Ani 2020!";
+                }
+                }, 1000);
+                </script>
+            <script>
+                var nr=5;
+                let timer = setInterval(function() 
+                {
+                    nr++;
+                    document.getElementById("alert").innerHTML="Ai fost inactiv "+nr+" secunde";
+                }, 1000);
+                window.onload = () => 
+                {
+                    functieDeIdle();
+                }
+                function functieDeIdle() {
+                var timp = 5000;
+                function toggleLaClasa() {
+                document.getElementById("OverLay").classList.toggle("overlay");
+                document.getElementById("OverWord").classList.toggle("overlayOnText");
+                document.getElementById("alert").innerHTML="Ai fost inactiv "+nr+" secunde";
+                }; 
+                var timeout = -1; 
+                cronometru(); // cronometru
+
+                function cronometru() {
+                    document.addEventListener("mousemove", stareActiva); // on activity reseteaza time-out-ul
+                    document.addEventListener("keypress", stareActiva);
+                    timeout = setTimeout(stareInactiva, timp); // daca timpul expira
+                }
+                function stareActiva() {
+                    nr=5;
+                    document.removeEventListener("mousemove", stareActiva); 
+                    document.removeEventListener("keypress", stareActiva);
+                    //scoatem evenimentele, altfel am face recursie infinita
+                    // pe functie onActivity si scoate din performanta ( putem vedea pe consola)
+                    if (timeout==-1) toggleLaClasa(); //, aici intra daca functia a pus deja overlay-ul si il scoate
+                    else clearTimeout(timeout); //, daca nu s-a pus overlay doar reseteaza timpul, ca se poata
+                    // puna overlay daca in viitor nu se fac miscari. Daca nu ar fi else-ul, o sa intre chiar daca
+                    // nu e inactivitate pe onExpires;
+                    cronometru();
+                }
+                function stareInactiva() {
+                nr=5;
+                toggleLaClasa();
+                timeout = -1;
+                }
+                };
+            </script>
+            <p>&nbsp;</p>
+            <p style="text-align: center;">A N U N Ț</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <p>Având în vedere:</p>
+            <ul>
+                <li>măsurile referitoare la desfășurarea activității angajaților, în scopul prevenirii răspândirii noului tip de Coronavirus (COVID-19);</li>
+                <li>art. 3 alin. 2 din Ordonanța militară nr. 2/2020 privind măsuri de prevenire a răspândirii COVID-19 prin care se interzice formarea unui grup mai mare de 3 persoane;</li>
+                <li>art. 471 alin. 1 din O.U.G. nr. 57/2019 privind Codul Administrativ prin care se poate amâna un concurs cu 15 zile</li>
+            </ul>
+            <p>se amână susținerea probei scrise pentru concursul organizat pentru data de 24.03.2020 – șef serviciu din cadrul Serviciului Juridic, Administrație Publică și Arhivă până în data de 08.04.2020.</p>
+            <p>&nbsp;</p>
+        </div>
+        <div>
+            <p>&nbsp;</p>
+            <p style="text-align: center;">ANUNT</p>
+            <p style="text-align: justify;"><br>
+            <br>
+            Primăria Municipiului Câmpulung, judeţul Argeş, str. Negru Vodă nr.127, organizează concurs  de recrutare pentru ocuparea  funcţiei  publice de execuție vacante de :</p>
+            <ul>
+                <li>1 funcţie publică de execuție vacantă -  consilier juridic gradul profesional asistent – Compartiment Juridic, Administrație Publică din cadrul Serviciului Juridic, Administrație Publică și Arhivă.</li>
+            </ul>
+            <p>&nbsp;</p>
+        </div>
+    </body>
+</html>

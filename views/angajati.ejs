@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Lista angajati</title>
+    <meta charset="utf-8">
+</head>
+<body class="container">
+
+<!-- headerul care se repeta pagina de pagina -->
+<%- include("../views/header") %>
+
+<% console.log(locals.BD.studenti[2].id, typeof locals.BD) %>
+
+<% if (locals.BD) { %>
+    <table>
+        <tr>    
+            <th>id</th>
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th>Departament</th>
+            <th>Imagine</th>
+        </tr>
+        <% for (var i = 0; i < BD.studenti.length; i++) { %>
+            <tr>
+                <td><%= BD.studenti[i].id %></td>
+                <td><%= BD.studenti[i].nume %></td>
+                <td><%= BD.studenti[i].prenume %></td>
+                <td><%= BD.studenti[i].grupa %></td>
+
+                <td><img src="/uploads/<%= BD.studenti[i].poza %>" alt="nu are poza"/></td>
+            </tr>    
+        <% } %>
+    </table>
+    <% } else { %>
+        <p>Nu avem studenti de afisat</p>
+    <% } %>
+
+<%- include("../views/footer") %>
+
+</body>
+</html>

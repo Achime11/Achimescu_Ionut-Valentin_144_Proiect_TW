@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Logo_Campulung.jpg">
+        <script src="js/contact.js"></script>
+        <title>Câmpulung Muscel</title>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a href="home.html" style="padding: 0px 0px;"><img class="logo" src="img/Logo_Campulung.jpg"></a></li>
+            <li><a href="home.html">Câmpulung</a></li>
+            <li><a href="news.html">Anunturi</a></li>
+            <li><a href="Conducere.html">Conducere</a></li>
+            <li><a href="Istorie.html">Istorie</a></li>
+            <li class="right"><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+        <div>
+            <div id='timer'> </div>
+            Userul curent: <input id="userId" type="text"/>
+            <button id='logInButton' onclick="retineUser()">Log in!</button>
+            <p id="knownUser"></p>
+            <button id='logOutButton' onclick="forgetUser()">Log out!</button>
+            <br><br><br>
+            Data nasteri: <input id="date" type="text"/>
+            <button id='varsta' onclick="ages()">Varstă!</button>
+            <p id="age"> &nbsp; </p>
+            <p>&nbsp;</p>
+            <dl>
+            <dt><b>Adresa:</b>&nbsp;Str. Negru Voda, Nr. 127, Câmpulung 115100, Arges</b></dt>
+            <br>
+            <dt><b>Numere de Telefon:</b></dt>
+            <dt>&nbsp;Primaria Municipiului Câmpulung va pune la dispozitie urmatoarele numere de telefon:</dt>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;<b>Secretariat:</b> 0248 511034</dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;<b>Contabilitate:</b> 0248 511039</dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;<b>Telefonul cetateanului:</b> 0248 511037</dd>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;<b>Fax:</b> 0248 510055, 024 8511036</dd><br>
+            <dd>&nbsp;&nbsp;&nbsp;&nbsp;<b>Politia Locala:</b> 0785 229 068 , 0785 229 069</dd>
+            <p>&nbsp;Dorinta noastra este o buna comunicare intre Primarie si cetateni. Tocmai de aceea va punem la dispozitie diverse modalitati de comunicare online.</p>
+            &nbsp;<b>Email: <a href="mailto:campulung@muscel.ro">campulung@muscel.ro</a>
+            </dl>
+        </div>
+    </body>
+</html>

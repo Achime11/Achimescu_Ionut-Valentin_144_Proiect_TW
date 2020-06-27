@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Logo_Campulung.jpg">
+        <title>Câmpulung Muscel</title>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a href="home.html" style="padding: 0px 0px;"><img class="logo" src="img/Logo_Campulung.jpg"></a></li>
+            <li><a href="home.html">Câmpulung</a></li>
+            <li><a href="news.html">Anunturi</a></li>
+            <li><a href="Conducere.html">Conducere</a></li>
+            <li><a class="active" href="Istorie.html">Istorie</a></li>
+            <li class="right"><a href="contact.html">Contact</a></li>
+        </ul>
+        Dimensiunea textului:
+        <select name="fonts" id="fonts">
+            <option value="10px">Mic</option>
+            <option value="14px">Mediu</option>
+            <option value="18px">Mare</option>
+        </select>
+        <button onclick="reset()">Reseteaza</button>
+        <div>
+            <p id="1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+            <p>&nbsp;</p>
+            <p id="2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+            <p>&nbsp;</p>
+            <p id="3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+            <p>&nbsp;</p>
+        </div>
+        <script>
+            function reset()
+            {
+                document.getElementById("fonts").value="14px";
+                localStorage.setItem("font","14px");
+            }
+            if(localStorage.getItem("font")===null)
+            {  
+                localStorage.setItem("font","14px");
+                document.getElementById("fonts").value="14px";
+            }
+            var x=document.getElementById("fonts").value=localStorage.getItem("font");
+            setInterval(function(){
+                var y=document.getElementById("fonts").value;
+                localStorage.setItem("font",y);
+                document.getElementById("fonts").value=y;
+                var list=document.getElementsByTagName("p");
+                for(pl=0;pl<list.length;++pl)
+                    list[pl].style.fontSize=y;
+            },100)
+
+            var i = 0;
+            var j = 0;
+            var k = 0;
+            var txt1 = "Din evul mediu și până în anul 1822, când a fost retrasă autonomia orășenească, judele orașului era ales în Biserica Bărăția în a treia duminică de după Paștele catolic. În timpul domniei lui Șerban Cantacuzino (1678-1688) au fost exercitate presiuni pentru trecerea juzilor catolici ai Câmpulungului la ortodoxie.";
+            var words1=txt1.split(" ");
+            var txt2 = "La sfârșitul secolului al XIX-lea Câmpulungul devenise o comună urbană ce juca rol de reședință a județului Muscel. Orașul avea o populație de 11.244 de locuitori. Străzile lui principale erau Negru Vodă, Râului, Matei Basarab și Gruiului; ele mergeau paralel prin centrul orașului și erau pietruite. Străzile Negru Vodă, Fierarilor și Câmpulung-Albești aveau plantați arbori. Erau amenajate trei piețe (Sfântul Ilie, Scheiul și a Județelor); piața Sfântul Ilie era cea principală, aflată lângă biserica cu același hram; acolo se ținea târg săptămânal, precum și un mare târg anual între 17 și 28 iulie, de Sfântul Ilie. Existau în oraș școli primare de băieți și fete, un gimnaziu, o școală normală, spital, cazărmi de dorobanți și călărași, poștă și muzeul „Negru Vodă”. Funcționau 19 biserici, între care și mănăstirea Câmpulung. Anuarul Socec din 1925 consemnează orașul cu același statut, având o populație de 16.100 de locuitori.";
+            var words2=txt2.split(" ");
+            var txt3 = "În 1950 județul Muscel a fost desființat, iar Câmpulungul a devenit oraș raional, reședință a raionului Muscel din regiunea Argeș. În 1968, la reforma administrativă, orașul a pierdut statutul de centru administrativ regional, devenind oraș al județului Argeș. Câmpulung a fost declarat municipiu în 1994.";
+            var words3=txt3.split(" ");
+            var speed = 333;
+            if (i < words1.length && j < words2.length && k < words3.length) {
+                document.getElementById("1").innerHTML +=" "+words1[i];
+                ++i;
+                document.getElementById("2").innerHTML +=" "+words2[j];
+                ++j;
+                document.getElementById("3").innerHTML +=" "+words3[k];
+                ++k;
+                setTimeout(typeWriter, speed)
+                function typeWriter() {
+                    if (i < words1.length) {
+                    document.getElementById("1").innerHTML +=" "+words1[i];
+                    ++i;}
+                    if (j < words2.length){
+                    document.getElementById("2").innerHTML +=" "+words2[j];
+                    ++j;}
+                    if (k < words3.length){
+                        document.getElementById("3").innerHTML +=" "+words3[k];
+                        ++k;}
+                        setTimeout(typeWriter, speed);
+                    }
+            }
+        </script>
+    </body>
+</html>

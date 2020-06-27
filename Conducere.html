@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/Logo_Campulung.jpg">
+        <title>Câmpulung Muscel</title>
+        <script src="js/conducere.js"></script>
+    </head>
+    <body>
+        <ul class="topnav">
+            <li><a href="home.html" style="padding: 0px 0px;"><img class="logo" src="img/Logo_Campulung.jpg"></a></li>
+            <li><a href="home.html">Câmpulung</a></li>
+            <li><a href="news.html">Anunturi</a></li>
+            <li><a class="active" href="Conducere.html">Conducere</a></li>
+            <li><a href="Istorie.html">Istorie</a></li>
+            <li class="right"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div>
+            <div class="dropdown">
+                <button class="dropbtn">Primar
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#"><div width="590px" style="padding:3px 3px 3px 3px; border-left:1px solid #dddddd; border-right:1px solid #dddddd; 
+                    border-top:1px solid #dddddd;">
+                    <p><b><img width="101" height="135"src="img/L_%20Taroiu%201.jpg" alt=""><br>1. Nume:</b>&nbsp; TÂROIU<br>
+                    <b>2. Prenume:</b>&nbsp; IOAN LIVIU<br>
+                    <b>3. Data nasterii:&nbsp; </b>21&nbsp;FEBRUARIE 1953<br>
+                    <b>4. Nationalitatea:</b>&nbsp; ROMÂNA<br>
+                    <b>5. Starea civila:</b>&nbsp; CASATORIT<br>
+                    <b>6. Studii</b>:</p>
+                    <p>1972 - 1977 - Institutul Politehnic Timisoara - Energetica</p>
+                    <p>1968 - 1972 - Liceul&nbsp;National cu Program de Atletism &nbsp;Campulung</p>
+                    </div></a>
+                </div>
+            </div>
+            <div><br><br><br></div>
+            <div class="dropdown">
+                <button class="dropbtn">Viceprimar
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#"><div width="590px" style="padding:3px 3px 3px 3px; border-left:1px solid #dddddd; border-right:1px solid #dddddd; 
+                    border-top:1px solid #dddddd;">
+                    <img src="img/Blidaru.jpg" width="120" height="120" alt="">
+                    <br><p><b>1. Nume:</b>&nbsp; BLIDARU<br>
+                    <b>2. Prenume:</b>&nbsp; MARGARIN SERBAN<br>
+                    <b>3. Data nasterii:&nbsp;&nbsp;</b>30 MAI 1969<br>
+                    <b>4. Nationalitatea:</b>&nbsp; ROMÂNA<br>
+                    <b>5. Studii</b>:</p>
+                    <p>1984 - 1988 - Liceul Teoretic Dinicu Golescu Campulung;&nbsp;Liceul Industrial Constructii Automobile nr. 1 &lt;&lt;Dacia&gt;&gt; Pitesti</p>
+                    <p>1990 - 1994 - Academia Nationala de Educatie Fizica si Sport Bucuresti. Curs de zi, cu media examenului de licenta 9,67&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;</p>
+                    </div></a>
+                </div>
+            </div>
+            <div><br><br><br></div>
+            <div class="dropdown">
+                <button class="dropbtn">Secretar
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#"><div>
+                    <p><b><img width="100" height="133" src="img/Simion%20Ramona.jpg" alt=""><br>1. Nume:</b>&nbsp; SIMION<br>
+                    <b>2. Prenume:</b>&nbsp; RAMONA<br>
+                    <b>3. Data nasterii:&nbsp; </b>07 OCTOMBRIE 1980<br>
+                    <b>4. Nationalitatea:</b>&nbsp; ROMÂNA<br>
+                    <b>5. Starea civila:</b>&nbsp; CASATORITA<br>
+                    <b>6. Studii</b>:</p>
+                    <p>2006 - 2008 - Universitatea din Pitesti - Masterat in stiinte juridice administrative</p>
+                    <p>1999 - 2003 - Universitatea din Craiova, Facultatea de Drept "Nicolae Titulescu" - licentiata in drept</p>
+                    </div></a>
+                </div>
+            
+            </div>
+            <br><br><br><br><br><br>
+              <button id='buttonId' onClick='AfisareTabel()'> Afisare </button>
+              <button id='buttonId' onClick='AscundereTabel()'> Ascundere </button>
+              <button id='buttonId' onClick='modificarePrimar()'> Modificare </button>
+              <table id="myTable">
+                <thead>
+                 <tr>
+                   <th>Post</th>
+                   <th>Nume</th>
+                   <th>Prenume</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+    </body>
+</html>
